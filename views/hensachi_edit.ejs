@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/hensachi/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>学部名</td><td><input type="text" name="code" value="<%= data.code %>"></td></tr>
+      <tr><td>学科名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>受験日程</td><td><input type="text" name="change" value="<%= data.change %>"></td></tr>
+      <tr><td>偏差値</td><td><input type="text" name="passengers" value="<%= data.passengers %>"></td></tr>
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/hensachi/"><button type="button">学部一覧に戻る</button></a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>分野名</td><td><%= data.code %></td></tr>
+    <tr><td>授業名</td><td><%= data.name %></td></tr>
+    <tr><td>必修か選択か</td><td><%= data.change %></td></tr>
+    <tr><td>単位数</td><td><%= data.passengers %></td></tr>
+    <tr><td>備考</td><td><%= data.distance %></td></tr>
+  </table>
+  <a href="/jugyou/edit/<%= id %>"><button type="button">編集</button></a>
+  <a href="/jugyou/delete/confirm/<%= id %>" >
+     <button type="button">削除</button>
+</a>
+  <a href="/jugyou"><button type="button">授業一覧に戻る</button></a>
+</body>
+</html>

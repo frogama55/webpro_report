@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>授業追加</title>
+</head>
+<body>
+    <form action="/jugyou" method="POST">
+        <input type="text" name="code" required>
+        <label for="code">＜＝分野名</label><br>
+        <input type="text" name="name" required>
+        <label for="name">＜＝授業名</label><br>
+        <input type="text" name="change">
+        <label for="change">＜＝必修か選択か</label><br>
+        <input type="text" name="passengers" required>
+        <label for="passengers">＜＝単位数</label><br>
+        <input type="text" name="distance" required>
+        <label for="distance">＜＝備考</label><br>
+        <input type="submit" values="登録">
+        <a href="/jugyou"><button type="button">授業一覧に戻る</button></a>
+    </form>
+</body>
+</html>

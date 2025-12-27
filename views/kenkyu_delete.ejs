@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>削除の確認</title>
+  <style>
+    .warning { color: red; font-weight: bold; }
+    .actions { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h2>削除の確認</h2>
+  
+  <p class="warning">以下のデータを本当に削除しますか？この操作は取り消せません。</p>
+
+  <table border="1">
+    <tr><th>ID</th><td><%= data.id %></td></tr>
+    <tr><th>研究室（教授）名</th><td><%= data.code %></td></tr>
+    <tr><th>研究概要</th><td><%= data.name %></td></tr>
+  </table>
+
+  <div class="actions">
+    <form action="/kenkyu/delete/<%= id %>" method="POST" style="display: inline;">
+      <button type="submit">はい、削除します</button>
+    </form>
+
+    <a href="/kenkyu/<%= id %>">
+      <button type="button">やっぱやめとく</button>
+    </a>
+  </div>
+
+</body>
+</html>

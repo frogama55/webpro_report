@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>学部名</td><td><%= data.code %></td></tr>
+    <tr><td>学科名</td><td><%= data.name %></td></tr>
+    <tr><td>受験日程</td><td><%= data.change %></td></tr>
+    <tr><td>偏差値</td><td><%= data.passengers %></td></tr>
+  </table>
+  <a href="/hensachi/edit/<%= id %>"><button type="button">編集</button></a>
+  <a href="/hensachi/delete/confirm/<%= id %>" >
+     <button type="button">削除</button>
+</a>
+  <a href="/hensachi"><button type="button">学部一覧に戻る</button></a>
+</body>
+</html>

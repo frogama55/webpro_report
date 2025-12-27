@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の編集</h2>
+  <form action="/jugyou/update/<%= data.id - 1 %>" method="POST">
+    <table>
+      <tr><th>項目</th><th>データ</th></tr>
+      <tr><td>分野名</td><td><input type="text" name="code" value="<%= data.code %>"></td></tr>
+      <tr><td>授業名</td><td><input type="text" name="name" value="<%= data.name %>"></td></tr>
+      <tr><td>必修か選択か</td><td><input type="text" name="change" value="<%= data.change %>"></td></tr>
+      <tr><td>単位数</td><td><input type="text" name="passengers" value="<%= data.passengers %>"></td></tr>
+      <tr><td>備考</td><td><input type="text" name="distance" value="<%= data.distance %>"></td></tr>
+    </table>
+    <input type="submit" values="登録">
+  </form>
+  <a href="/jugyou/"><button type="button">授業一覧に戻る</button></a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>千葉工業大学の学部</title>
+</head>
+<body>
+  <h2>千葉工業大学の学部・学科一覧</h2>
+  <table>
+    <tr><th>ID</th><th>学部名</th><th>学科名</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+
+        <%if( row !== null ) { %>
+        <tr><td><%= row.id %></td>
+        <td><%= row.code %></td>
+        <td><a href="/hensachi/<%= number %>"><%= row.name %></a></td></tr>
+        <% } %>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <a href="/hensachi/create"><button type="button">追加</button></a>
+   <a href="/"><button type="button">トップページに戻る</button></a> 
+</body>
+</html>

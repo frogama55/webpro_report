@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table>
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>研究室（教授）名</td><td><%= data.code %></td></tr>
+    <tr><td>研究概要</td><td><%= data.name %></td></tr>
+    <tr><td>研究内容</td><td><small><%= data.change %></small></td></tr>
+    <tr><td>キーワード</td><td><%= data.passengers %></td></tr>
+    <tr><td><% if (data.distance) { %>
+     <a href="<%= data.distance %>" target="_blank">研究室サイトURL</a>
+    <% } else { %>
+     <tr><td>研究室サイトURL</td><td>なし</td></tr>
+    <% } %>
+  </table>
+  <a href="/kenkyu/edit/<%= id %>"><button type="button">編集</button></a>
+  <a href="/kenkyu/delete/confirm/<%= id %>" >
+     <button type="button">削除</button>
+</a>
+  <a href="/kenkyu"><button type="button">研究室一覧に戻る</button></a>
+</body>
+</html>

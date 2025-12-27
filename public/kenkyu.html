@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>研究室追加</title>
+</head>
+<body>
+    <form action="/kenkyu" method="POST">
+        <input type="text" name="code" required>
+        <label for="code">＜＝研究室（教授）名</label><br>
+        <input type="text" name="name" required>
+        <label for="name">＜＝研究概要</label><br>
+        <input type="text" name="change">
+        <label for="change">＜＝研究内容</label><br>
+        <input type="text" name="passengers" required>
+        <label for="passengers">＜＝キーワード</label><br>
+        <input type="text" name="distance" required>
+        <label for="distance">＜＝研究室サイトURL</label><br>
+        <input type="submit" values="登録">
+        <a href="/kenkyu"><button type="button">研究室一覧に戻る</button></a>
+    </form>
+</body>
+</html>
