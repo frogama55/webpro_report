@@ -24,7 +24,7 @@ let hensachi = [
   { id:8, code:"創造工学部", name:"都市環境工学科", change:"一般入試A日程", passengers:42.5 },
   //{ id:16, code:"創造工学部", name:"都市環境工学科", change:"B日程", passengers:42.5 },
   { id:9, code:"創造工学部", name:"デザイン科学科", change:"一般入試A日程", passengers:47.5 },
-  //{ id:18, code:"創造工学部", name:"デザイン科学科", change:"B日程", passengers:47.5, },
+  //{ id:18, code:"創造工学部", name:"デザイン科学科", chang日程", passengee:"Brs:47.5, },
   { id:10, code:"先進工学部", name:"未来ロボティクス学科", change:"一般入試A日程", passengers:42.5 },
   //{ id:20, code:"先進工学部", name:"未来ロボティクス学科", change:"B日程", passengers:45.0 },
   { id:11, code:"先進工学部", name:"生命科学科", change:"一般入試A日程", passengers:42.5 },
