@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1766925337.17837 "main.aux" "main.bbl" "main" 1766925340.7594 0
+["bibtex main"] 1766927771.30473 "main.aux" "main.bbl" "main" 1766927774.9538 0
   "./refs.bib" 1766923910.21787 3779 be486d7467a4dd7479ae1f2b87d41a8b ""
   "junsrt.bst" 0 -1 0 ""
-  "main.aux" 1766925339.75919 12765 ff9be3bb758fdec1fd12fb612ed32d56 "latex"
+  "main.aux" 1766927774.05322 12765 ff9be3bb758fdec1fd12fb612ed32d56 "latex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["dvipdf"] 1766925339.93158 "main.dvi" "main.pdf" "main" 1766925340.76021 0
-  "main.dvi" 1766925339.76118 64872 b1e6d39d22e4ef69f0a92e18b603c9f5 "latex"
+["dvipdf"] 1766927774.23658 "main.dvi" "main.pdf" "main" 1766927774.95451 0
+  "main.dvi" 1766927774.05507 65944 c89235795bd186bf49d5eddedd252476 "latex"
   (generated)
   "main.pdf"
   (rewritten before read)
-["latex"] 1766925338.58081 "/Users/kanegn/Desktop/webpro/webpro_report/report/main.tex" "main.dvi" "main" 1766925340.75948 0
-  "/Users/kanegn/Desktop/webpro/webpro_report/report/main.tex" 1766925180.51691 2330 41d441b3fc775f60bf6978ffd1fd06dd ""
+["latex"] 1766927772.86067 "/Users/kanegn/Desktop/webpro/webpro_report/report/main.tex" "main.dvi" "main" 1766927774.95389 0
+  "/Users/kanegn/Desktop/webpro/webpro_report/report/main.tex" 1766927769.12492 2382 98528033f586e76217602b19fb4e5b77 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty" 1576625341 40635 c40361e206be584d448876bba8a64a3b ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/bitset/bitset.sty" 1576016050 33961 6b5c75130e435b2bfdb9f480a09a39f9 ""
   "/usr/local/texlive/2025/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty" 1576625223 8371 9d55b8bd010bc717624922fb3477d92e ""
@@ -41,6 +41,7 @@
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/atveryend-ltx.sty" 1738182759 2378 14b657ee5031da98cf91648f19642694 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/base/textcomp.sty" 1738182759 2846 e26604d3d895e65d874c07f30c291f3f ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty" 1579038678 6078 f1cb470c9199e7110a27851508ed7a5c ""
+  "/usr/local/texlive/2025/texmf-dist/tex/latex/bxjatoucs/bxjatoucs.sty" 1721683517 11877 27323f61c4dacb9bf3c1ed3fe6bd57f7 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption.sty" 1696191071 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty" 1696191071 72619 ee90b6612147680fd73c3b1406a74245 ""
   "/usr/local/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty" 1720383029 12726 67708fc852a887b2ba598148f60c3756 ""
@@ -80,7 +81,11 @@
   "/usr/local/texlive/2025/texmf-dist/tex/platex/base/jbk12.clo" 1601501154 8480 59dce3282767c6d06ec88a1f5c25450a ""
   "/usr/local/texlive/2025/texmf-dist/tex/platex/japanese-otf/ajmacros.sty" 1554418559 31169 82da95c56dec9c45e5b9734751394461 ""
   "/usr/local/texlive/2025/texmf-dist/tex/platex/japanese-otf/otf.sty" 1739912993 25045 446bbab63fc4e83acbe9998abd167c7b ""
-  "developer_hensachi.tex" 1766925021.01816 4806 f07622358e54360d3a5299cf3fa9c685 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/platex/pxjahyper/pxjahyper-ajm.def" 1724702849 26128 e7db4c1b731077efa6527320f46899f5 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/platex/pxjahyper/pxjahyper-enc.sty" 1724702849 3306 995e2205cf41fc3451510929bf252c67 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/platex/pxjahyper/pxjahyper-uni.def" 1724702849 2847 8d466050c21cf8f14c4fc386d56a81e0 ""
+  "/usr/local/texlive/2025/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty" 1724702849 63432 0fcef4317cb9da632093709a5686ea8b ""
+  "developer_hensachi.tex" 1766925938.039 4810 6c619b497092a457223ba9f152259a02 ""
   "developer_jugyou.tex" 1766925021.00714 4811 cd87b9d2d29ac56b1a9f0e889c445274 ""
   "developer_kenkyu.tex" 1766925021.00675 5389 2d34eedc318bc2a0a51d5ee4f4949405 ""
   "fig/developer/hensachi_page.pdf" 1766922790.39861 101717 1bd3d56150acdd47823212ccb41c7711 ""
@@ -93,10 +98,10 @@
   "fig/user/kenkyu_edit.png" 1766899787.79049 122278 42bc7f64427d8a4c7bce34212037615b ""
   "fig/user/kenkyu_top.png" 1766899305.805 205219 3b44c58a20a36a69f1b2c8c8d92031fb ""
   "jex.cls" 1721082240 29715 46896ad0734c07a6d8a549e6f6d54e90 ""
-  "main.aux" 1766925339.75919 12765 ff9be3bb758fdec1fd12fb612ed32d56 "latex"
-  "main.bbl" 1766925337.26455 620 528066ec33674c88898fabd0005e652c "bibtex main"
-  "main.out" 1766925339.76082 7288 c6cb069c3cf7a94de6f90160a5a63928 "latex"
-  "main.tex" 1766925180.51691 2330 41d441b3fc775f60bf6978ffd1fd06dd ""
+  "main.aux" 1766927774.05322 12765 ff9be3bb758fdec1fd12fb612ed32d56 "latex"
+  "main.bbl" 1766927771.40904 620 528066ec33674c88898fabd0005e652c "bibtex main"
+  "main.out" 1766927774.05475 7863 13e971b07279175665c726d7e6b9f639 "latex"
+  "main.tex" 1766927769.12492 2382 98528033f586e76217602b19fb4e5b77 ""
   "owner.tex" 1766925335.46991 4702 925ab573ee57894b990fb2869246d0b3 ""
   "user.tex" 1766924204.8944 5202 98bb9fc4d036facaf4227c4dd3218aeb ""
   (generated)
