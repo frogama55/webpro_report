@@ -1,0 +1,73 @@
+\chapter{千葉工業大学情報変革科学部情報工学科の研究室一覧\\システムの開発者向け仕様書}
+\section{データ構造}
+\subsection{変数定義}
+本システムでは，データベースソフトウェアを使用せず，アプリケーションサーバ（IDapp.js）内の配列変数kenkyuにデータを格納する方法を採用している．kenkyuはオブジェクトの配列変数であり，プロセス終了時にデータは消失する．
+
+\subsection{オブジェクトの構造}
+kenkyu配列の各要素は，以下のプロパティを持つオブジェクトである．変数名と実データの対応関係は表\ref{KANKEI_kenkyu}の通りである\cite{sankou_kenkyu}．
+
+
+\begin{table}[H]
+    \centering
+    \caption{変数名と実データの対応関係}
+    \label{KANKEI_kenkyu}
+    \begin{tabularx}{\textwidth}{|c|c|l|X|}
+        \hline
+        変数名 & データ型 & 本システムでの役割 & データ例  \\ \hline
+        id & Number & データの管理ID & 1   \\ \hline 
+        code & String & 研究室（教授）名 & "有本 泰子"  \\ \hline
+        name & String & 研究概要 & "マルチモーダルな情報からコミュニケーションを解明"  \\ \hline
+        change & String & 研究内容 & "感情の情報工学的な研究と、認知的・心理学的研究の両方を行う文理融合型研究を行います。コミュニケーション場面を研究対象とすることで、感情の表出や知覚に利用される表情や音声・生理反応を個別に分析するだけではなく、それらを統合的に分析し、システムの精度向上を図る仕組みを考えます。"  \\ \hline
+        passengers & Number/String & キーワード & "音声処理・コミュニケーション・認知科学・マルチメディア・心理学"  \\ \hline
+        distance & Number/String & 研究室サイトURL & "https://mac-lab.org/" \\ \hline
+    \end{tabularx}
+\end{table}
+
+\newpage
+\section{HTTPメソッドとリソース名}
+表\ref{KANKEI_kenkyu_HTTP}に，リソース名とHTTPメソッドを定義する．
+\begin{table}[H]
+    \centering
+    \caption{変数名と実データの対応関係}
+    \label{KANKEI_kenkyu_HTTP}
+    \small
+    \begin{tabularx}{\textwidth}{|c|c|l|X|}
+        \hline
+        機能 & HTTPメソッド & \multicolumn{1}{c|}{リソース名（URL）} & \multicolumn{1}{c|}{処理内容}  \\ \hline
+        一覧表示 & GET & /kenkyu & データ一覧画面（kenkyu.ejs）を表示する．   \\ \hline 
+        詳細表示 & GET & /kenkyu/:number & 指定IDの詳細画面（kenkyu\_detail.ejs）を表示する．   \\ \hline
+        新規登録（画面） & GET & /kenkyu/create & 新規登録フォーム（kenkyu.html）へリダイレクトする．   \\ \hline
+        新規登録（処理） & POST &/kenkyu & フォームからデータを受け取り，配列に追加する．  \\ \hline
+        編集（画面） & GET & /kenkyu/edit/:number& 編集フォーム（kenkyu\_edit.ejs）を表示する．   \\ \hline
+        編集（処理） & POST & /kenkyu/update/:number & 既存データを更新し，一覧表示画面へリダイレクトする． \\ \hline
+        削除（画面） & GET & /kenkyu/delete/confirm/:number & 削除確認画面（kenkyu\_delete.ejs）を表示する．\\ \hline
+        削除（処理） & POST &/kenkyu/delete/:number & データをnull化し，一覧表示画面へリダイレクトする． \\ \hline
+    \end{tabularx}
+\end{table}
+
+\newpage
+\section{ページ遷移}
+ページ遷移の様子を，図\ref{kenkyu_page}に示す．
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=0.95\textwidth,clip]{fig/developer/kenkyu_page.pdf}
+\end{center}
+\caption{\textgt{
+    ページ遷移図
+}}
+\label{kenkyu_page}
+\end{figure}
+
+\newpage
+\section{機能詳細と実装上の注意点}
+\subsection{新規データ追加機能（Create）}
+この機能では，kenkyu配列の末尾に新しいオブジェクトを追加（push）し，「kenkyu.length + 1」（一番最後のIDを1大きくしたもの）を新しいIDとして付与する．追加完了後，kenkyu.ejsを用いて登録済みデータ一覧ページを表示する．
+
+\subsection{一覧表示機能（Read）}
+この機能では，EJSテンプレート内でkenkyu配列をループ処理し，表形式で表示する．注意点として，削除処理によって，配列内にnullが含まれる可能性があるため，EJS側でif文等を用いた確認を行い，null要素を表示しないように制御する必要がある．
+
+\subsection{更新機能（Update）}
+この機能では，URLパラメータである:numberを用いて配列にアクセスし，フォームから送信された値（req,body）で詳細を上書きする．処理完了後は，res.redirect(`/kenkyu')により，一覧画面へ遷移する．　
+
+\subsection{削除機能（Delete）}
+配列の要素を削除するために，該当部分にnullを代入する．これは，spliceを使用すると，削除した部分にあとのデータが詰められるため，既存データを指す:numberがずれてしまい，詳細表示や編集時のリンク先が誤ったデータを指すことがあったためである．ejs側では表記上削除されるようにしている．
